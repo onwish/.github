@@ -25,7 +25,7 @@
 
 6. 将 `export PYTHONPATH=/Users/samuel/work/conviction-space:$PYTHONPATH` 加入到 `.bashrc` (bash) 或者 `.zshrc` (zshell) 末尾。
 
-7. 在工作区目录(`~/work/conviction-space`) 下创建 `.env` 文件，文件内容如下（修改成你的目录）：
+7. 在工作区目录(`~/work/conviction-space`) 下创建 `.env` 文件，文件内容如下（也可以复制原仓库的`.env`然后修改，注意最开始几个路径有变化）：
    ```
    DEBUG_MODE=true
    OUTPUTS_ROOT=/Users/samuel/work/conviction-space/outputs
@@ -38,8 +38,8 @@
    DB_TYPE=postgresql
    DB_USER=postgres
    DB_PORT=5432
-   DB_PASSWORD=xxx
-   DB_HOST=xxx.xxx.xxx.xom
+   DB_PASSWORD=
+   DB_HOST=
    DB_DATABASE=algotrading
 
    DATASVC_DB_DATABASE=datasvc
