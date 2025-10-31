@@ -23,4 +23,7 @@
    <img width="443" height="263" alt="image" src="https://github.com/user-attachments/assets/dcc98cef-2b81-49dc-bea9-fb945dcd7043" />
 
 
-6. 运行：先进入工作区目录 `/Users/sam/work/conviction-space`；然后 `source venv/bin/active` 激活虚拟环境；运行 `python debug.py full` 全流程运行。
+6. `export PYTHONPATH=/Users/samuel/work/conviction-space:$PYTHONPATH` 会自动加入到 `.bashrc` (bash) 或者 `.zshrc` (zshell) ，如果没有，可以手工添加。
+   
+7. 运行：先进入工作区目录 `/Users/sam/work/conviction-space`；然后 `source venv/bin/active` 激活虚拟环境；运行 `python debug.py full` 全流程运行。
+
