@@ -24,6 +24,115 @@
 
 
 6. 将 `export PYTHONPATH=/Users/samuel/work/conviction-space:$PYTHONPATH` 加入到 `.bashrc` (bash) 或者 `.zshrc` (zshell) 末尾。
+
+7. 在工作区目录(`~/work/conviction-space`) 下创建 `.env` 文件，文件内容如下（修改成你的目录）：
+   ```
+   DEBUG_MODE=true
+   OUTPUTS_ROOT=/Users/samuel/work/conviction-space/outputs
+   STRATEGY_ROOT=/Users/samuel/work/conviction-space/gbs_strategy_zoo
    
-7. 运行：先进入工作区目录 `/Users/sam/work/conviction-space`；然后 `source venv/bin/active` 激活虚拟环境；运行 `python debug.py full` 全流程运行。
+   # Execution Mode Configuration
+   # Options: backtest | paper | live
+   EXECUTION_MODE=backtest
+   
+   DB_TYPE=postgresql
+   DB_USER=postgres
+   DB_PORT=5432
+   DB_PASSWORD=xxx
+   DB_HOST=xxx.xxx.xxx.xom
+   DB_DATABASE=algotrading
+
+   DATASVC_DB_DATABASE=datasvc
+   
+   # Data API Keys
+   FMP_API_KEY=
+   WRDS_USER=
+   WRDS_PASSWORD=
+   FACTSET_USERNAME=
+   FACTSET_API_KEY=
+   FACTSET_BASE_URL=https://api.factset.com
+   SUPABASE_SERVICE_ROLE_KEY=
+   FRED_API_KEY=
+   
+   # override all llm models.
+   # LLM_MODEL=gpt-4o-mini
+   
+   LLM_CACHE=true
+   
+   # litellm used keys.
+   OPENAI_API_KEY=
+   ANTHROPIC_API_KEY=
+   
+   AWS_ACCESS_KEY_ID=
+   AWS_SECRET_ACCESS_KEY=
+   AWS_DEFAULT_REGION=us-east-1
+   LITELLM_INFERENCE_PROFILE_ARN='arn:aws:bedrock:us-east-1:471112791150:inference-profile/us.anthropic.claude-sonnet-4-20250514-v1:0'
+   
+   
+   ############### App Running ###############
+   GBS_STORAGE_BACKEND=file          # 使用文件存储
+   
+   AXIOMA_DB_USER=postgres
+   AXIOMA_DB_PASSWORD=
+   AXIOMA_DB_HOST=
+   AXIOMA_DB_PORT=5432
+   AXIOMA_DB_NAME=axioma_test
+   
+   # Optional: Database connection pool settings
+   DB_POOL_SIZE=5
+   DB_MAX_OVERFLOW=10
+   
+   # GPS Application Database Configuration(For 业务场景)
+   
+   GBSAPP_DB_TYPE=postgresql
+   GBSAPP_DB_USER=postgres
+   GBSAPP_DB_PORT=5432
+   GBSAPP_DB_PASSWORD=
+   GBSAPP_DB_HOST=
+   GBSAPP_DB_NAME=gbs_app
+   
+   GBS_REDIS_HOST=localhost
+   GBS_REDIS_PORT=6379
+   GBS_REDIS_PASSWORD=
+   
+   AWS_DEFAULT_REGION=us-east-1
+   AWS_S3_ACCESS_KEY=
+   AWS_S3_SECRET_ACCESS_KEY=
+   AWS_S3_GBS_AGENT_LOGS_BUCKET=gbs-agent-logs
+   
+   ############### AWS Bedrock Anthropic ###############
+   
+   # 启用 Bedrock 集成
+   CLAUDE_CODE_USE_BEDROCK=1
+   AWS_REGION=us-east-1  # 或您首选的区域
+   
+   # 可选：覆盖小型/快速模型（Haiku）的区域
+   ANTHROPIC_SMALL_FAST_MODEL_AWS_REGION=us-east-1
+   ANTHROPIC_MODEL='us.anthropic.claude-sonnet-4-20250514-v1:0'
+   ANTHROPIC_SMALL_FAST_MODEL='us.anthropic.claude-3-5-haiku-20241022-v1:0'
+   
+   AWS_BEARER_TOKEN_BEDROCK=
+   
+   ############### Other Settings ###############
+   
+   # Logging
+   LOG_FORMATTER=colorful
+   LOG_LEVEL=INFO
+   LOG_COLOR_DEBUG=thin_white
+   LOG_COLOR_INFO=white
+   # LOG_SDK choices: python, logfire, loki
+   LOG_SDK=python
+   LOGFIRE_TOKEN=
+   LOGFIRE_SERVICE_NAME=gbs
+   LOGFIRE_SERVICE_VERSION=1.0.0
+   LOGFIRE_ENVIRONMENT=
+   
+   ##############  personal env  ################
+   
+   http_proxy=http://127.0.0.1:1087
+   https_proxy=http://127.0.0.1:1087
+
+   ```
+   
+8. 运行：先进入工作区目录 `/Users/sam/work/conviction-space`；然后 `source venv/bin/active` 激活虚拟环境；运行 `python debug.py full` 全流程运行。
 
