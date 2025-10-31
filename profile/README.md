@@ -16,7 +16,8 @@
    
 4. 完成后，检查 `/Users/sam/work/`**conviction-space**`/` 目录（这是就是工作区目录），里面结构如下. 且会软连接 `debug.py`（从 gbs_runtime) 和 `requirements.txt` (从 gbs_deploy) 到工作区目录。图中 `agent` 和 `gbs` 是我创建的软连接，指向原项目的 agent 和 gbs 目录，后面会删除.
   
-   <img width="448" height="266" alt="image" src="https://github.com/user-attachments/assets/ee1f058d-e58f-4e1f-85e3-fcf89261c567" />
+   <img width="453" height="245" alt="image" src="https://github.com/user-attachments/assets/8bcbcb54-0afd-419b-8db0-1b08270ed463" />
+
 
 5. 用 vscode 打开工作区目录下的 `gbs.code-workspace` 文件，会配置好 vscode.
    <img width="443" height="263" alt="image" src="https://github.com/user-attachments/assets/dcc98cef-2b81-49dc-bea9-fb945dcd7043" />
