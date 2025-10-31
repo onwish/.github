@@ -7,14 +7,14 @@
    
 2. 进入你的工作目录，比如 `/Users/sam/work`，创建 `install.sh` 文件，粘贴复制的脚本.
    
-3. 运行刚创建的 `bash install.sh` 脚本。过程中会问你是否要 创建 **工作区目录 conviction-space** 及 **克隆所有仓库**，选择 `Y`；之后安装过程中，会询问是否要安装 **Python虚拟环境**，选择`Y` 会在工作区目录下创建 `venv` 并安装所有依赖。图中 `agent` 和 `gbs` 是我创建的软连接，指向原项目的 agent 和 gbs 目录，后面会删除.
+3. 运行刚创建的 `bash install.sh` 脚本。过程中会问你是否要 创建 **工作区目录 conviction-space** 及 **克隆所有仓库**，选择 `Y`；之后安装过程中，会询问是否要安装 **Python虚拟环境**，选择`Y` 会在工作区目录下创建 `venv` 并安装所有依赖。
    <img width="832" height="399" alt="image" src="https://github.com/user-attachments/assets/d17f4157-12db-4971-8a93-20bc2ca45f72" />
 
    <img width="804" height="238" alt="image" src="https://github.com/user-attachments/assets/647ad976-f402-4941-bad1-8aa6cef85541" />
 
    <img width="989" height="122" alt="image" src="https://github.com/user-attachments/assets/4a3617e8-f702-4422-a8f0-c77a7d25f69b" />
    
-4. 完成后，检查 `/Users/sam/work/`**conviction-space**`/` 目录（这是就是工作区目录），里面结构如下. 且会软连接 `debug.py`（从 gbs_runtime) 和 `requirements.txt` (从 gbs_deploy) 到工作区目录。
+4. 完成后，检查 `/Users/sam/work/`**conviction-space**`/` 目录（这是就是工作区目录），里面结构如下. 且会软连接 `debug.py`（从 gbs_runtime) 和 `requirements.txt` (从 gbs_deploy) 到工作区目录。图中 `agent` 和 `gbs` 是我创建的软连接，指向原项目的 agent 和 gbs 目录，后面会删除.
   
    <img width="448" height="266" alt="image" src="https://github.com/user-attachments/assets/ee1f058d-e58f-4e1f-85e3-fcf89261c567" />
 
